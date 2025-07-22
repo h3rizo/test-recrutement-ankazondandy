@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test de Recrutement - Agent de Recouvrement</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(45deg, #2c3e50, #3498db);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .subtitle {
+            margin: 10px 0 0 0;
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+            padding: 30px;
+            border-radius: 10px;
+            border-left: 5px solid #3498db;
+            background: #f8f9fa;
+            transition: transform 0.3s ease;
+        }
+        
+        .section:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        
+        .timer-section {
+            background: #e8f5e8;
+            border-left-color: #27ae60;
+        }
+        
+        .formula-section {
+            background: #fff3cd;
+            border-left-color: #f39c12;
+        }
+        
+        .scenario-section {
+            background: #f8d7da;
+            border-left-color: #e74c3c;
+        }
+        
+        .exercise {
+            background: white;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+        
+        .exercise h3 {
+            color: #34495e;
+            margin-top: 0;
+        }
+        
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 0.9em;
+        }
+        
+        .data-table th,
+        .data-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        
+        .data-table th {
+            background: #3498db;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .data-table tr:nth-child(even) {
+            background: #f2f2f2;
+        }
+        
+        .instructions {
+            background: #e3f2fd;
+            border: 1px solid #2196f3;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .badge {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.8em;
+            margin: 5px;
+        }
+        
+        .difficulty-easy { background: #27ae60; }
+        .difficulty-medium { background: #f39c12; }
+        .difficulty-hard { background: #e74c3c; }
+        
+        .highlight {
+            background: #fff3cd;
+            padding: 10px;
+            border-radius: 5px;
+            border-left: 4px solid #f39c12;
+            margin: 10px 0;
+        }
+
+        .important-note {
+            background: #ffebee;
+            border: 2px solid #f44336;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .important-note h3 {
+            color: #c62828;
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔧 Test de Recrutement</h1>
+            <div class="subtitle">Agent de Recouvrement - Points d'eau potable Ankazondandy</div>
+        </div>
+        
+        <div class="content">
+            <div class="important-note">
+                <h3>⚠️ INSTRUCTIONS IMPORTANTES</h3>
+                • <strong>Durée totale du test :</strong> 90 minutes<br>
+                • <strong>Logiciel requis :</strong> Microsoft Excel<br>
+                • <strong>Fichier à créer :</strong> "Test_[VotreNom]_[Date].xlsx"<br>
+                • <strong>Retour :</strong> Envoyez votre fichier par email dans les délais impartis<br>
+                • <strong>Important :</strong> Sauvegardez votre travail régulièrement !
+            </div>
+
+            <div class="section timer-section">
+                <h2>⏱️ PARTIE 1 : Test de Vitesse de Saisie (15 minutes)</h2>
+                <span class="badge difficulty-easy">Facile</span>
+                
+                <div class="exercise">
+                    <h3>Exercice 1.1 : Saisie rapide des données clients</h3>
+                    <p><strong>Consigne :</strong> Saisissez les données suivantes dans Excel le plus rapidement possible sans faire d'erreur. Chronométrez-vous !</p>
+                    
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>ID Client</th>
+                                <th>Nom Complet</th>
+                                <th>Fokontany</th>
+                                <th>Montant Dû (Ar)</th>
+                                <th>Date Échéance</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>AK001</td><td>RAKOTOARISON Hanta</td><td>Ankazondandy</td><td>63 200</td><td>12/09/2025</td></tr>
+                            <tr><td>AK002</td><td>RAMAROSON Feno</td><td>Antsahatanteraka</td><td>28 900</td><td>15/09/2025</td></tr>
+                            <tr><td>AK003</td><td>RAZANAJATOVO Miora</td><td>Anosy</td><td>47 650</td><td>08/09/2025</td></tr>
+                            <tr><td>AK004</td><td>ANDRIAMIHAJA Lalao</td><td>Fierenana</td><td>35 400</td><td>20/09/2025</td></tr>
+                            <tr><td>AK005</td><td>RATSIMANDRESY Vonjy</td><td>Tsaranierana</td><td>52 750</td><td>10/09/2025</td></tr>
+                            <tr><td>AK006</td><td>RASOLOFONIAINA Nary</td><td>Ankazondandy</td><td>41 300</td><td>18/09/2025</td></tr>
+                            <tr><td>AK007</td><td>RANDRIANASOLO Benja</td><td>Antsahatanteraka</td><td>39 850</td><td>25/09/2025</td></tr>
+                            <tr><td>AK008</td><td>RAHARIMAMPIANINA Solo</td><td>Anosy</td><td>31 600</td><td>14/09/2025</td></tr>
+                            <tr><td>AK009</td><td>RAZAFIMAHEFA Tianah</td><td>Fierenana</td><td>58 150</td><td>11/09/2025</td></tr>
+                            <tr><td>AK010</td><td>RAKOTONDRAZAFY Hery</td><td>Tsaranierana</td><td>44 950</td><td>22/09/2025</td></tr>
+                            <tr><td>AK011</td><td>RATSIMBAZAFY Dina</td><td>Ankazondandy</td><td>37 800</td><td>16/09/2025</td></tr>
+                            <tr><td>AK012</td><td>ANDRIANAIVO Noro</td><td>Antsahatanteraka</td><td>49 400</td><td>28/09/2025</td></tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="highlight">
+                        <strong>📝 À noter :</strong> Indiquez votre temps de saisie dans une cellule séparée. La précision compte autant que la vitesse !
+                    </div>
+                </div>
+            </div>
+
+            <div class="section formula-section">
+                <h2>🧮 PARTIE 2 : Maîtrise des Formules Excel (45 minutes)</h2>
+                <span class="badge difficulty-medium">Moyen</span>
+                
+                <div class="exercise">
+                    <h3>Exercice 2.1 : Calculs de base</h3>
+                    <p>À partir des données saisies précédemment, calculez :</p>
+                    
+                    <p><strong>A.</strong> Le montant total de toutes les créances</p>
+                    <p><strong>B.</strong> Le nombre de clients dans le fokontany "Ankazondandy"</p>
+                    <p><strong>C.</strong> Le montant total des créances pour le fokontany "Fierenana"</p>
+                    <p><strong>D.</strong> Le montant moyen des créances par client</p>
+                    
+                    <div class="highlight">
+                        <strong>💡 Astuce :</strong> Utilisez des formules Excel automatisées, pas de calculs manuels !
+                    </div>
+                </div>
+                
+                <div class="exercise">
+                    <h3>Exercice 2.2 : Analyses avancées</h3>
+                    <span class="badge difficulty-hard">Difficile</span>
+                    
+                    <p><strong>E.</strong> Nombre de clients ayant un montant dû supérieur à 45 000 Ar</p>
+                    <p><strong>F.</strong> Montant total des créances pour les clients avec échéance avant le 16/09/2025</p>
+                    <p><strong>G.</strong> Clients avec montant > 40 000 Ar ET échéance avant le 18/09/2025</p>
+                    <p><strong>H.</strong> Nombre de clients en retard de paiement (échéance dépassée par rapport à aujourd'hui)</p>
+                    <p><strong>I.</strong> Montant moyen des créances par fokontany pour "Tsaranierana"</p>
+                </div>
+                
+                <div class="exercise">
+                    <h3>Exercice 2.3 : Tableau de bord de recouvrement</h3>
+                    <p>Créez un tableau récapitulatif avec les colonnes suivantes :</p>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Fokontany</th>
+                                <th>Nombre de Clients</th>
+                                <th>Montant Total (Ar)</th>
+                                <th>Montant Moyen (Ar)</th>
+                                <th>Clients en Retard</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Ankazondandy</td><td>[À calculer]</td><td>[À calculer]</td><td>[À calculer]</td><td>[À calculer]</td></tr>
+                            <tr><td>Antsahatanteraka</td><td>[À calculer]</td><td>[À calculer]</td><td>[À calculer]</td><td>[À calculer]</td></tr>
+                            <tr><td>Anosy</td><td>[À calculer]</td><td>[À calculer]</td><td>[À calculer]</td><td>[À calculer]</td></tr>
+                            <tr><td>Fierenana</td><td>[À calculer]</td><td>[À calculer]</td><td>[À calculer]</td><td>[À calculer]</td></tr>
+                            <tr><td>Tsaranierana</td><td>[À calculer]</td><td>[À calculer]</td><td>[À calculer]</td><td>[À calculer]</td></tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="highlight">
+                        <strong>Important :</strong> Toutes les cellules doivent contenir des formules, pas des valeurs saisies manuellement !
+                    </div>
+                </div>
+            </div>
+
+            <div class="section scenario-section">
+                <h2>🎭 PARTIE 3 : Mises en Situation Pratiques (30 minutes)</h2>
+                <span class="badge difficulty-medium">Moyen</span>
+                
+                <div class="exercise">
+                    <h3>Situation 1 : Gestion urgente des impayés</h3>
+                    <p><strong>Contexte :</strong> Le point d'eau de Fierenana risque d'être fermé faute de paiements suffisants. Vous devez agir rapidement.</p>
+                    
+                    <p><strong>Vos missions :</strong></p>
+                    <p>1. Identifiez tous les clients de Fierenana en retard de paiement</p>
+                    <p>2. Calculez le montant total des arriérés pour ce fokontany</p>
+                    <p>3. Classez les clients de Fierenana par montant dû (du plus élevé au plus faible)</p>
+                    <p>4. Créez une colonne "Niveau de Priorité" avec la règle suivante :</p>
+                    <ul>
+                        <li>Si montant > 50 000 Ar : "URGENT"</li>
+                        <li>Si montant entre 35 000 et 50 000 Ar : "MOYEN"</li>
+                        <li>Si montant < 35 000 Ar : "NORMAL"</li>
+                    </ul>
+                    
+                    <p><strong>5. Rédigez un plan d'action :</strong> Expliquez en 3-4 phrases comment vous comptez procéder pour récupérer ces créances.</p>
+                </div>
+                
+                <div class="exercise">
+                    <h3>Situation 2 : Rapport mensuel au directeur</h3>
+                    <p><strong>Contexte :</strong> Votre directeur vous demande un rapport sur l'efficacité du recouvrement ce mois.</p>
+                    
+                    <p><strong>Données complémentaires :</strong></p>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Fokontany</th>
+                                <th>Montant Total Facturé (Ar)</th>
+                                <th>Montant Déjà Récupéré (Ar)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Ankazondandy</td><td>195 000</td><td>142 300</td></tr>
+                            <tr><td>Antsahatanteraka</td><td>175 000</td><td>118 150</td></tr>
+                            <tr><td>Anosy</td><td>140 000</td><td>79 250</td></tr>
+                            <tr><td>Fierenana</td><td>160 000</td><td>93 550</td></tr>
+                            <tr><td>Tsaranierana</td><td>185 000</td><td>97 700</td></tr>
+                        </tbody>
+                    </table>
+                    
+                    <p><strong>Vos missions :</strong></p>
+                    <p>1. Calculez le taux de recouvrement pour chaque fokontany (en %)</p>
+                    <p>2. Identifiez le fokontany avec le plus faible taux de recouvrement</p>
+                    <p>3. Proposez 3 actions concrètes pour améliorer la situation globale</p>
+                </div>
+                
+                <div class="exercise">
+                    <h3>Situation 3 : Négociation avec un gros client</h3>
+                    <p><strong>Contexte :</strong> RAZAFIMAHEFA Tianah (58 150 Ar) souhaite étaler son paiement sur 5 mois égaux. Analysez cette demande.</p>
+                    
+                    <p><strong>Vos missions :</strong></p>
+                    <p>1. Créez un échéancier de paiement sur 5 mois (montants égaux)</p>
+                    <p>2. Calculez le montant de chaque mensualité</p>
+                    <p>3. Évaluez l'impact : combien de temps de retard moyen cela représente-t-il ?</p>
+                    <p>4. Recommandation : accepteriez-vous cette proposition ? Justifiez votre réponse en 2-3 phrases</p>
+                    
+                    <div class="highlight">
+                        <strong>Bonus :</strong> Proposez une alternative (ex: paiement en 3 fois avec conditions particulières)
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <h3>Situation 4 : Analyse comparative des fokontany</h3>
+                    <p><strong>Contexte :</strong> Le maire d'Ankazondandy veut connaître la situation de chaque fokontany pour planifier les améliorations.</p>
+                    
+                    <p><strong>Vos missions :</strong></p>
+                    <p>1. Identifiez le fokontany avec le plus grand nombre de clients</p>
+                    <p>2. Trouvez le fokontany avec la créance moyenne la plus élevée</p>
+                    <p>3. Calculez le pourcentage que représente chaque fokontany dans le total des créances</p>
+                    <p>4. Recommandez 2 fokontany prioritaires pour des actions de sensibilisation et expliquez pourquoi</p>
+                </div>
+            </div>
+
+            <div class="instructions">
+                <h2>📤 REMISE DU TRAVAIL</h2>
+                <p><strong>Avant d'envoyer votre fichier :</strong></p>
+                • Vérifiez que toutes les formules fonctionnent correctement<br>
+                • Ajoutez une feuille "Explications" avec vos commentaires sur les situations<br>
+                • Organisez votre fichier de manière claire (noms des feuilles explicites)<br>
+                • Sauvegardez au format Excel (.xlsx)<br>
+                • Nommage : "Test_[VotreNom]_[Date].xlsx"
+                
+                <p><strong>📧 Envoi :</strong> Retournez votre fichier par email à l'adresse indiquée dans votre convocation.</p>
+                
+                <p><strong>⏰ Délai :</strong> Respectez impérativement le délai de 90 minutes !</p>
+            </div>
+
+            <div class="highlight">
+                <h3>🍀 Bonne chance !</h3>
+                <p>Ce test évalue vos compétences techniques Excel et votre capacité d'analyse dans le contexte du recouvrement pour la commune rurale d'Ankazondandy. Prenez le temps de bien lire chaque consigne et n'hésitez pas à être créatif dans vos solutions !</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
